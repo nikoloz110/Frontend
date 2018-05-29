@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>radial gradients</title>
+    <style>
+        div {
+            height: 200px;
+        }
+        #grad1 {
+            background-image: radial-gradient(red, green, blue);
+        }
+        #grad2 {
+            background-image: radial-gradient(red 5%, green 15%, blue 60%);
+        }
+
+        #grad3 {
+            background: radial-gradient(circle, red 5%, green 15%, blue 60%);
+        }
+
+        #grad4 {
+            background: repeating-radial-gradient(red 15%, blue 19%);
+        }
+
+        #grad5 {
+            background: repeating-radial-gradient(circle at 100%, #333, #333 10px, #eee 10px, #eee 20px);
+        }
+
+        h1 {
+            text-shadow: 4px 4px 5px red, 8px 8px 5px yellow;
+        }
+        h1.multiple {
+            color: white;
+            text-shadow: 1px 1px 2px #000, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .box {
+            background-color:#222;
+            text-align: center;
+            line-height: 200px;
+        }
+        .box h1 {
+            font-size: 36px;
+            color: rgba(0, 0, 0, .6);
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, .1);
+        }
+        .box_shadow {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            box-shadow: 10px 10px 5px grey;
+
+            margin-bottom: 150px;
+        }
+        .box_shadow:hover {
+            box-shadow: 0 0 5px #333 inset;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="grad1"></div>
+    <div id="grad2"></div>
+    <div id="grad3"></div>
+    <hr>
+    <div id="grad4"></div>
+    <div id="grad5"></div>
+    <br>
+    <br> -->
+    <h1>H1 text shadow</h1>
+    <h1 class="multiple">multiple text shadow</h1>
+    <div class="box">
+        <h1>text Shadow</h1>
+    </div>
+    <hr>
+    <div class="box_shadow"></div>
+</body>
+</html>

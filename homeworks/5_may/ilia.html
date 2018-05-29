@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .hrBig {
+      width: 50%;
+      height: 10px;
+      background-color: black;
+      border-radius: 25px;
+    }
+    .hrSmall {
+      width: 55%;
+      height: 7px;
+      border-radius: 25px;
+    }
+
+    #hrSmall1 {
+      background-color: green;
+    }
+    #hrSmall2 {
+      background-color: red;
+    }
+    #hrSmall3 {
+      background-color: blue;
+      margin-right: 5%;
+    }
+
+    #facultyName {
+      list-style: none;
+    }
+
+    #facultyPrograms {
+      list-style: none;
+      padding-left: 0;
+    }
+    strong {
+      display: inline-block;
+      padding: 20px 0px 20px 0px;
+    }
+
+    #alpha {
+      list-style-type: upper-alpha;
+    }
+    #h2n2 {
+      text-align: right;
+      margin-right: 5%;
+    }
+  </style>
+</head>
+<body>
+  <hr class="hrBig" align="left">
+  <h1>ილიას სახელმწიფო უნივერსიტეტი</h1>
+  <hr class="hrBig" align="left">
+  <br>
+  <h2>ფაკულტეტების დასახელება</h2>
+
+  <ul id="facultyName">
+    <li><a href="#">მეცნიერებათა და ხელოვნების ფაკულტეტი</a></li>
+    <li><a href="#">ბიზნესის ფაკულტეტი</a></li>
+    <li><a href="#">სამართლის ფაკულტეტი</a></li>
+    <li><a href="#">საინჟინრო ფაკულტეტი</a></li>
+  </ul>
+  <hr class="hrSmall" id="hrSmall1" align="left">
+  <h3>ბიზნესის ფაკულტეტის პროგრამები</h3>
+  <ul>
+    <li>ბიზნესის ადმინისტრირება</li>
+    <li>საბანკო საქმე</li>
+    <li>ტურიზმის მენეჯმენტი</li>
+  </ul>
+  <hr class="hrSmall" id="hrSmall2" align="left">
+  <h2 id="h2n2">მეცნიერებათა და ხელოვნების ფაკულტეტის პროგრამები</h2>
+  <hr class="hrSmall" id="hrSmall3" align="right">
+  <ul id="facultyPrograms">
+    <li><strong>ზუსტი მეცნიერებები</strong>
+      <ol>
+        <li>ფიზიკა</li>
+        <li>ინფორმატიკა</li>
+        <li>ბიოლოგია</li>
+      </ol>
+    </li>
+    <li><strong>ჰუმანიტარული მეცნიერებები</strong>
+      <ol start="4">
+        <li>ქართველოლოგია</li>
+        <li>ანგლისტიკა</li>
+        <li>გერმანისტიკა</li>
+      </ol>
+    </li>
+  </ul>
+  <ol id="alpha">
+    <li>first symbol of alphabet</li>
+    <li>Second symbol of alphabet</li>
+    <li>third symbol of alphabet</li>
+  </ol>
+</body>
+</html>

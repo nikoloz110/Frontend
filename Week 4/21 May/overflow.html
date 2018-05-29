@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS 101</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body > div:first-child {
+            width: 250px;
+            height: 100px;
+            background-color: #e0e0e0;
+            /* overflow-y: auto;
+            overflow-x: scroll; */
+            overflow: hidden;
+            /* initial, inherit, unset, auto, scroll, hidden, visible */
+        }
+
+        .outer {
+            border: 5px dotted rgba(61, 214, 0, 0.904);
+            border-radius: 5px;
+            width: 450px;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+        .float {
+            padding: 10px;
+            border: 5px solid rgba(0, 214, 29, 0.726);
+            border-radius: 5px;
+            background-color: rgba(50, 0, 214, 0.719);
+            color: #fff;
+            float: left;
+            width: 200px;
+            margin: 0 20px 0 0;
+        }
+
+        .overflow {
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat consequatur ex reprehenderit molestiae aspernatur culpa eius exercitationem vitae itaque, aliquam, facilis accusantium! Ad molestias necessitatibus dolorum odio excepturi similique repudiandae.Itaque doloremque distinctio eligendi, recusandae libero earum soluta inventore totam unde perferendis. Consequuntur perferendis corporis ducimus provident quae dolor sunt nostrum obcaecati consectetur, facilis nesciunt qui itaque maxime impedit nihil?
+    </div>
+    
+    <hr>
+    <h2>floated: Plenty of Text</h2>
+    <div class="outer">
+        <div class="float">
+            i am a floated element
+        </div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In deleniti recusandae quam voluptas, dignissimos officia quas? Omnis aliquam corrupti suscipit qui, rerum magnam sapiente a autem dignissimos repellat saepe modi!Natus quisquam asperiores labore sunt quos unde quidem fugiat blanditiis pariatur in esse recusandae nostrum, consectetur accusantium mollitia illo dolor dolorum commodi assumenda aut deleniti? Magnam alias inventore dolores harum.
+    </div>
+
+    <h2>floated: not enough text</h2>
+    <div class="outer">
+        <div class="float">
+            i am a floated element
+        </div>
+        Lorem ipsum dolor sit amet 
+    </div>
+
+    <h2>floated: overflow solution</h2>
+    <div class="outer overflow">
+        <div class="float">
+            i am a floated element
+        </div>
+        the outer text has overflow: auto;
+    </div>
+
+
+</body>
+</html>

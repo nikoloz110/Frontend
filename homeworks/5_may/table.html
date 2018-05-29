@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework</title>
+  <style>
+    table, th, td {
+      border: 1px black solid;
+      border-collapse: collapse;
+    }   
+    th, td {
+      padding: 10px;
+    }
+    th {
+      text-transform: capitalize;
+    }
+    td::first-letter{
+      text-transform: capitalize;
+    }
+    textarea {
+      resize: none;
+    }
+    .actions {
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <form action="" method="GET" id="form1">
+    <table>
+      <thead>
+        <tr>
+          <th>control type</th>
+          <th>data</th>
+          <th>control</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>text box</td>
+          <td> <label for="name">name:</label></td>
+          <td><input id="name" type="text" name="userName" placeholder="Enter name" required></td>
+        </tr>
+        <tr>
+          <td>password</td>
+          <td><label for="password">Password:</label></td>
+          <td><input id="password" type="password" name="password" required></td>
+        </tr>
+        <tr>
+          <td>text area</td>
+          <td><label for="address">address:</label></td>
+          <td><textarea name="address" id="address" cols="21" rows="5" placeholder="Enter address"></textarea></td>
+        </tr>
+        <tr>
+          <td>drop down list</td>
+          <td><label for="area">area:</label></td>
+          <td>
+            <select id="area" name="area">
+              <option value="center">Center</option>
+              <option value="urban">Urban</option>
+              <option value="seaside">Seaside</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>check Box</td>         
+          <td>Hobbies:</td>
+          <td>
+              <div>
+                <input type="checkbox" name="hobbies" value="sport" id="sport"><label for="sport">Sport</label>
+              </div>
+              <div>
+                <input type="checkbox" name="hobbies" value="reading" id="reading"><label for="reading">Reading</label>
+              </div>
+              <div>
+                <input type="checkbox" name="hobbies" value="t.v." id="t.v."><label for="t.v.">T.V.</label>
+              </div>
+              <div>
+                <input type="checkbox" name="hobbies" value="internet" id="internet"><label for="internet">Internet</label>
+              </div>       
+          </td>         
+        </tr>
+        <tr>
+          <td>radio Buttons</td>
+          <td>Gender:</td>
+          <td>
+            <fieldset>
+              <legend>Gender Selection</legend>
+              <div>
+                <input type="radio" id="male" value="male" name="gender" checked><label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="female" value="female" name="gender"><label for="female">Female</label>
+              </div>
+            </fieldset>
+          </td>
+        </tr>
+        <tr>
+          <td>file upload</td>
+          <td><label for="userImage">your image:</label></td>
+          <td><input type="file" id="userImage" name="userImage"></td>
+        </tr>
+        <tr>
+          <td>buttons</td>
+          <td>actions:</td>
+          <td><input class="actions" type="submit" value="Submit">
+              <input class="actions" type="reset" value="Reset">
+              <button class="actions" type="submit" value="Submit">Button</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>

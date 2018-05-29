@@ -1,0 +1,57 @@
+sonarwhal
+always have at least and no more h1- seo wise. 
+lotsa h2-s.
+no text without tags. have inside <p> at least
+ctrl + enter next line vs code
+lang="ka" - 50% an meti emtxveodes sitis enas. dual lang, change lank whichever lang is on
+<> </> does not matter
+<pre></pre> - shows as is written.
+monishvna + crl + d
+img src alt title
+rel="noopener"
+draggable="false"
+img path /images/img.jpg - root directory
+shift + tab - moves back 1 tab range
+alt + shift + downarrow - copies 
+alt + uparrpw/downarrow 
+ul ol does not matter for seo
+tables - caption good for seo
+webschool.ge
+tfoot tbody thead + captions - full semantic table
+use label - must
+git reset --hard HEAD-3
+h1 refers to the div it is in, or the first one closest. ???
+main tag
+figure
+time
+address
+<a href="tel:+995455464> mobile 995435435</a>
+http://ogp.me/
+apple mobile web app cpable
+facebook developer share
+shortcut icon favicon.icon
+li*5>a
+crtl +d  then left / right arrow
+https://gsnedders.html5.org/outliner/
+figure - on standalone semantic media
+seo - url should be in accordance with site content.  example: on .ge
+article vs section ???
+higher level section heading should be lower than sectioins lower headings lelvels
+header requires to be multiple headings included inside. if there is 1, dont use header;
+type = "text/txt" | "text/css" depreceated both;
+mozilla dev tools save changes to hmtl... file;
+data-modal html css ???
+li*4>a[href="#"]{menu item $}
+> first level selector css
+hover over css selector in vs code and stare
+hover and active should come last (after visited and so, not to get overshadowded by them)
+crtl + tab switches tabs in a vs code
+ctrl + w - close file. ctrl + o open file;
+placeholder.com
+lorempixel.com
+https://placekitten.com/200/300
+drag window left 50%, split screen
+.clearfix with pseudi after elelment
+div.column*3>h2(p)
+drag tab in vs code and miwie boloshgi
+

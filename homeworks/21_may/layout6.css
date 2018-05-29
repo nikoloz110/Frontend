@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.first {
+  height: 150px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+.second {
+  height: 300px;
+  background-color: rgb(255, 0, 0);
+  border: 1px solid black;
+  float: left;
+  width: 22.7%;
+}
+
+
+.third {
+  height: 80px;
+  width: 54.1%;
+  background-color: rgba(35, 110, 110, 0.712);
+  border: 1px solid black;
+  float: left;
+}
+
+.forth {
+  height: 300px;
+  width: 22.7%;
+  background-color: rgb(4, 12, 37);
+  border: 1px solid black;
+  float: right;
+}
+.fifth {
+  height: 220px;
+  width: 54.1%;
+  background-color: rgb(0, 26, 255);
+  border: 1px solid black;
+  float: left;
+}
+
+
+
+
+
+.clearfix {
+  clear: both;
+}
+
+.sixth {
+  height: 200px;
+  background-color: brown;
+} 
