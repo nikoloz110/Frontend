@@ -1,0 +1,42 @@
+@media all and (min-width: 768px) { 
+  body {
+    background: rgb(0, 0, 149);
+    justify-content: space-between;
+  height: 100%;
+  }
+  figure {
+    box-sizing: border-box;
+    width: 33%;
+  }
+}
+ 
+@media all and (min-width: 480px) and (max-width: 768px) { 
+  body {
+    background: rgb(0, 255, 149);
+    justify-content: space-between;
+  height: 100%;
+    
+  }
+  figure {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+ 
+@media all and (max-width: 480px) { 
+
+h1 {
+  font-size: 0.75em;
+  color: blue;
+}
+body {
+  margin: 10px;
+  font-size: 1.5em;
+  background: red;
+  justify-content: space-between;
+  height: 100%;
+}
+img {
+  width: 100%;
+}
+}
