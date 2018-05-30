@@ -1,3 +1,3 @@
  63fbd5c15e66e979f750d231dde0e60acbcf5c78 
 ba18e37293e5f73f253b71b08c0f594d6e39aca0
- Sync : Upload Complete. GIST ID :  6dc83eeea7a1d90c0aeee94a5053ea31 . Please copy and use this ID in other machines to download settings.
+ Sync : Upload Complete. GIST ID :  6dc83eeea7a1d90c0aeee94a5053ea31 . Please copy and use this ID in other machines to download settings.bash
