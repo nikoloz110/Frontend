@@ -1,0 +1,305 @@
+/* general start*/
+@font-face {
+  font-family: gothamRounded;
+  src: url(/fonts/GothamRounded-Medium.otf);
+  }
+@font-face {
+  font-family: gothamRoundedLight;
+  src: url(/fonts/GothamRounded-Book.otf);
+  }
+
+body {
+    font-family: gothamRounded, Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    background-color: #EDEFF0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.offscreen {
+position: absolute;
+clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+clip: rect(1px, 1px, 1px, 1px);
+padding: 0;
+border: 0;
+height: 1px;
+width: 1px;
+overflow: hidden;
+}
+
+body section {
+  background-color: #fff;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+/* general end */
+/* header start */
+header {
+  background-color: #3E474F;
+}
+header nav {
+  display: grid;
+  grid-template-columns: fit-content(20%) 1fr fit-content(20%);
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+header nav h2 {
+  display: none;
+}
+header nav ul li a, header nav span {
+  color: #b2bbbd;
+  font-size: 18px;
+}
+header a:hover {
+  color: #fff;
+}
+/* --------------------------------- */
+header nav a.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 2px solid #515960;
+  margin-right: 15px;
+}
+
+header nav a.logo:hover > span {
+  color: white;
+}
+header nav a.logo:hover > img {
+  filter: invert(100%);
+}
+header nav a.logo span {
+  margin-left: 18px;
+  padding-right: 28px;
+}
+header nav a.logo img {
+  width: 35px;
+  height: 35px;
+}
+/* -------------------------------- */
+header nav .navPrimary {
+  display: flex;
+  line-height: 70px;
+}
+header nav ul.navPrimary li a {
+  display: block;
+  margin: 0 15px;
+}
+header nav ul.navPrimary li a.active{
+  color: #fff;
+} 
+
+/* ----------------------------------- */
+header nav ul.navSecondary {
+  display: flex;
+  align-items: center;
+  line-height: 70px;
+}
+
+header nav ul.navSecondary a {
+  display: block;
+  font-size: 16px;
+  margin: 0 15px;
+}
+header .trial {
+  color: #5fcf80;
+}
+
+/* section Welcome start */
+body section.welcome {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 30px;
+  border: 1px solid black;
+}
+body section.welcome div.wrapperWelcome
+{
+  margin: 0 15px 0 0;
+}
+body section.welcome div.wrapperImage {
+  margin: 0 0 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body section.welcome div.wrapperWelcome h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 550;
+  color: #384047;
+}
+body section.welcome div.wrapperWelcome p {
+  font-size: 14px;
+  font-family: gothamRoundedLight;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #8B999B;
+  margin-bottom: 20px;
+}
+
+body section.welcome div.wrapperWelcome h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #384047;
+}
+
+body section.welcome div.wrapperWelcome a {
+  background-color: #5fcf80;
+  border-radius: 4px;
+  color: #fff;
+  padding: 16px 22px;
+  display: inline-block;
+
+}
+
+body section.welcome div.wrapperWelcome a:hover {
+  background-color: #34ad58;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* ---------------------------------- */
+body div.wrapperImage img{
+  text-align: center;
+  margin: 30px;
+  max-width: 300px;
+}
+/* section Welcome end */
+
+/* search bar start */
+div.search {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  background: #fff;
+}
+div.search form {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+
+}
+
+div.search form input {
+  font-family: gothamRoundedLight, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+div.search label {
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  color: #4B5658;
+}
+div.search input[type="text"]{
+  width: 80%;
+  border: 1px white solid;
+  outline: none;
+}
+
+div.search > div {
+  display: flex;
+  justify-content: flex-end;
+}
+div.search div ul {
+  display: flex;
+  justify-content: flex-end;
+}
+div.search div ul a {
+  display: block;
+  padding: 24px 10px;
+  font-size: 14px;
+  color:#7b8b8e;
+}
+div.search div ul a:hover {
+  color: rgb(87, 99, 102);
+
+}
+
+
+/* search bar end */
+
+/* courses start */
+
+body section.courses {
+  margin: 0 auto;
+  background: grey;
+}
+
+body section.courses .wrapperCourses {
+  display: grid;
+  background-color: red;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  justify-content: space-between;
+}
+
+#cardHead {
+  background: orange;
+}
+
+body section.courses .wrapperCourses p.description {
+  width: 250px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.wrapperDescription {
+  height: 250px;
+}
+
+
+
+
+
+
+
+
+
+/* courses end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body a.trial {
+  background-color: #5fcf80;
+  border-radius: 4px;
+  color: #fff;
+  padding: 16px 22px;
+  display: inline-block;
+
+}
