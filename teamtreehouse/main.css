@@ -241,13 +241,14 @@ body section.courses .wrapperCourses {
   display: grid;
   background-color: red;
   grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   justify-content: space-between;
 }
 
 #cardHead {
   background: orange;
+  height: 60px;
 }
 
 body section.courses .wrapperCourses p.description {
@@ -295,7 +296,7 @@ body section.courses .wrapperCourses p.description {
 
 
 
-body a.trial {
+body a#trial {
   background-color: #5fcf80;
   border-radius: 4px;
   color: #fff;
