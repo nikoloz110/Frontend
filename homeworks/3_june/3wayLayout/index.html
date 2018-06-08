@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <style>
+
+    body, div {
+      box-sizing: border-box;
+    }
+    .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .wrapper div {
+      border: dotted 1px green;
+      height: 100px;
+      margin: 15px 0;
+    }
+    .wrapper div:nth-child(1) {
+      width: 48%; 
+      background: orange;
+      }
+      .wrapper div:nth-child(2) {
+        width: 48%; 
+      background: orange;
+      }
+      .wrapper div:nth-child(3) {
+        width: 100%; 
+      }
+      .wrapper div:nth-child(4) {
+        width: 32%; 
+        background: orange;
+      }
+      .wrapper div:nth-child(5) {
+        width: 32%; 
+        background: orange;
+      }
+      .wrapper div:nth-child(6) {
+        width: 32%; 
+        background: orange;
+      }
+      .wrapper div:nth-child(7) {
+        width: 21%; 
+      }
+      .wrapper div:nth-child(8) {
+        width: 21%; 
+      }
+      .wrapper div:nth-child(9) {
+        width: 21%; 
+      }
+      .wrapper div:nth-child(10) {
+        width: 21%; 
+      }
+
+    @media all and (max-width: 960px) {
+      .wrapper div:nth-child(1) {
+        width: 100%; 
+      }
+      .wrapper div:nth-child(2) {
+        width: 100%; 
+      }
+      .wrapper div:nth-child(3) {
+        width: 100%; 
+
+      }
+      .wrapper div:nth-child(4) {
+        width: 100%; 
+
+      }
+      .wrapper div:nth-child(5) {
+        width: 100%; 
+      }
+      .wrapper div:nth-child(6) {
+        width: 100%; 
+      }
+      .wrapper div:nth-child(7) {
+        width: 48%; 
+      }
+      .wrapper div:nth-child(8) {
+        width: 48%; 
+      }
+      .wrapper div:nth-child(9) {
+        width: 48%; 
+
+      }
+      .wrapper div:nth-child(10) {
+        width: 48%; 
+
+      }
+    }
+
+    @media all and (max-width: 640px) {
+      .wrapper div:nth-child(n) {
+        width: 100%;
+      }
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+  </div>
+</body>
+</html>
