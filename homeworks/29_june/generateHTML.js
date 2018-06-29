@@ -77,13 +77,13 @@ tagName - tag of parent element. argument type - string
 
 parentSelector - dom element which generateHtml appends its structure to. argument type - string
 
-content - adds text content to parent, child or both elements. first argument - text itself. second argument(optional) can be: "parent", "child", "both" OR can be omitted. default is set to "parent". argument type - array with 2 string elements.
+content - adds text content to parent, child or both elements. first argument - text itself. second argument (optional) can be: "parent", "child", "both" OR can be omitted. default is set to "parent". argument type - array with 2 string elements.
 
-attribute(optional) -  sets attribute(s) of an element. can set as many attributes as needed. first argument(s) - sets the attribute itself. second argument specifies element to set attributes. second argument(optional) can be: "parent", "child", "both" OR can be omitted. default is set to "parent". argument type - array with 2 array elements. first one containing array with n number of arrays containing 2 strings(attribute and value), second one - array with 1 string element.
+attribute (optional) -  sets attribute(s) of an element. can set as many attributes as needed. first argument(s) - sets the attribute itself. second argument specifies element to set attributes. second argument (optional) can be: "parent", "child", "both" OR can be omitted. default is set to "parent". argument type - array with 2 array elements. first one containing array with n number of arrays containing 2 strings(attribute and value), second one - array with 1 string element.
 
-childCount - number of child elements. argument type - number
+childCount (optional) - number of child elements. argument type - number
 
-childElement - tag of child element. argument type - string
+childElement (optional) - tag of child element. argument type - string
  */
 
 //                                  Test Case
