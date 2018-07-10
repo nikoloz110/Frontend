@@ -44,8 +44,7 @@ function Student(name) {
   this.id = students.length - 1;
 }
 function addStudent() {
-  console.log("student add function");
-  debugger;
+
   //Create new student object and add it to student array
   let name = (prompt("enter student full name"));;
   if (name == undefined || name == "") {
@@ -178,7 +177,6 @@ let grade;
 
 function showMarks() {
   // empty table
-  // debugger;
   while (marksTable.firstElementChild) {
     marksTable.firstElementChild.remove();
   }
@@ -321,7 +319,7 @@ function callback(e) {
     source2.scrollTop = source.scrollTop;
     timeout = setTimeout(function() {
       source2.addEventListener("scroll", callback);
-    }, 100);
+    }, 5);
   }
 }
 //#endregion

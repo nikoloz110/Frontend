@@ -22,16 +22,13 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-.scrollBar {
-  overflow-x: scroll;
-  overflow-y: scroll;
-}
+
 /* ======================Body============================= */
 body {
   display: grid;
   background-color: var(--azure);
   grid-template-columns: minmax(170px, 1fr) 250px repeat(4, 1fr);
-  grid-template-rows: 60px 50px auto auto;
+  grid-template-rows: 62px 50px auto auto;
   grid-template-areas:
     "sidebar header header header header header"
     "sidebar nameAvgsTableHead datesTable datesTable datesTable datesTable"
@@ -238,8 +235,14 @@ body {
   font-size: 14px;
 }
 /* ====================== End Footer ============================= */
+/* ====================== scrollBar class ============================= */
+.scrollBar {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+/* ====================== End scrollBar class ============================= */
 
-/* ====================== Responsive ============================= */
+/* ====================== Responsive  {320 - 680 -960} ====================== */
 
 /* ======================  680 - 960  ============================= */
 @media all and (max-width: 960px) {
@@ -286,12 +289,11 @@ body {
     "nameAvgsTable nameAvgsTable marksTable marksTable marksTable marksTable"
     "footer footer footer footer footer footer";
     grid-template-columns: minmax(170px, 1fr) 85px repeat(4, 1fr);
-    grid-template-rows: max-content 50px auto 40px;
+    grid-template-rows: 62px 50px auto 40px;
   }
 
   .footer {
-    padding: 0;
-    margin-right: 10px;
+    padding-right: 10px;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
