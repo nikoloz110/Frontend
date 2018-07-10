@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <ul class="navWrapper">
+        <li class="navFirstLi">
+          <a href="#" class="addStudent" id="addStudent">add
+            <span>student</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="removeStudent">remove
+            <span>student</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="addDay">add
+            <span>day</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="removeDay">remove
+            <span>day</span>
+          </a>
+        </li>
+        <li class="navLastLi">
+          <a href="#" class="statsBtn">
+            <svg class="burgerSvg">
+              <path d="M0,5 30,5" stroke="#b2bbbd" stroke-width="5" />
+              <path d="M0,14 30,14" stroke="#b2bbbd" stroke-width="5" />
+              <path d="M0,23 30,23" stroke="#b2bbbd" stroke-width="5" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="datesTable">
+  </div>
+  <div class="nameAvgsTableHead">
+    <div class="nameHeading">name</div>
+    <div class="avgHeading">AVG</div>
+  </div>
+  <div class="nameAvgsTable">
+  </div>
+  <div class="marksTable">
+  </div>
+  <aside class="statistics">
+    <a href="#" class="closeStatisticsBtn">x</a>
+    <h1>statistic of students results</h1>
+    <p>total days
+      <span class="stat"></span>
+    </p>
+    <p>missed lessons
+      <span class="stat"></span>
+    </p>
+    <p>average mark
+      <span class="stat"></span>
+    </p>
+    <p>total students
+      <span class="stat"></span>
+    </p>
+
+  </aside>
+  <footer class="footer">
+
+    <h2>author</h2>
+    <p>2018 &copy; nikoloz asatiani</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+</html>
