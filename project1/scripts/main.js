@@ -415,4 +415,4 @@ var checkMobile = function() {
 
 // P.S Touch simulation does not work in fireFox Responsive Design Mode, also tables dont sync well when touch scrolling on virtual devices. Both of them works fine on real devices.
 
-// P.P.S application is live on: https://nikoloz110.github.io/Frontend/project1/
+// P.P.S application is live on: https://nikoloz110.github.io/Frontend/project1
