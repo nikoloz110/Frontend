@@ -333,21 +333,20 @@ body {
 /* ======================  0 - 480 ============================= */
 @media all and (max-width: 480px) {
   body {
-    grid-template-columns: 100px 52px repeat(4, 1fr);
+    grid-template-columns: 120px 52px repeat(4, 1fr);
   }
   .navWrapper li a {
     margin: 0px;
     padding: 7px 0;
   }
-
   .navWrapper li span {
     display: block;
   }
   .nameAvgsTable {
-    grid-template-columns: 100px 50px;
+    grid-template-columns: 120px 50px;
     grid-auto-rows: 40px;
   }
   .nameAvgsTableHead {
-    grid-template-columns: 102px 50px;
+    grid-template-columns: 122px 50px;
   }
 }
