@@ -1,0 +1,353 @@
+/* ======================General============================= */
+@font-face {
+  font-family: gothamRounded;
+  src: url(fonts/GothamRounded-Medium.otf);
+}
+
+:root {
+  --darkGrey: #3e474f;
+  --grey: #b2bbbd;
+  --lightGrey: #edeff0;
+  --darkGreen: #043927;
+  --lightGreen: #3f704d;
+  --azure: azure;
+  --red: #8d021f;
+  --green: #01796f;
+}
+
+html {
+  box-sizing: border-box;
+  background: var(--red);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.red {
+  background-color: var(--red);
+}
+.green {
+  background-color: var(--green);
+}
+/* ======================Body============================= */
+body {
+  display: grid;
+  background-color: var(--azure);
+  grid-template-columns: minmax(170px, 1fr) 250px repeat(4, 1fr);
+  grid-template-rows: 62px 50px auto auto;
+  grid-template-areas:
+    "sidebar header header header header header"
+    "sidebar nameAvgsTableHead datesTable datesTable datesTable datesTable"
+    "sidebar nameAvgsTable marksTable marksTable marksTable marksTable"
+    "footer nameAvgsTable marksTable marksTable marksTable marksTable";
+
+  height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-transform: capitalize;
+  position: relative;
+  overflow: hidden;
+  font-family: gothamRounded, Arial, Helvetica, sans-serif;
+  color: var(--azure);
+}
+/* ======================End Body============================= */
+
+/* ======================Header============================= */
+.header {
+  grid-area: header;
+}
+
+.navWrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--darkGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navFirstLi {
+  margin-left: auto;
+}
+
+.navLastLi {
+  margin-left: auto;
+}
+.navWrapper li a {
+  text-decoration: none;
+  display: block;
+  color: var(--grey);
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 20px 0;
+}
+
+.navWrapper li a:hover {
+  color: #fff;
+}
+.navWrapper li a.statsBtn {
+  display: none;
+  padding: 0 inherit 0 0;
+}
+/* ======================End Header============================= */
+
+/* ======================Dates Table============================= */
+.datesTable {
+  grid-area: datesTable;
+  display: grid;
+  grid-auto-columns: 85px;
+  grid-auto-flow: column;
+  grid-gap: 2px;
+
+  position: absolute;
+  top: 0px;
+  bottom: -17px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: scroll;
+}
+
+.dateCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--darkGreen);
+  border-bottom: 2px solid var(--azure);
+}
+
+/* ======================End Dates Table============================= */
+
+/* ====================== Name & averages Table============================= */
+.nameAvgsTableHead {
+  grid-area: nameAvgsTableHead;
+  display: grid;
+  grid-template-columns: auto 80px;
+  border-bottom: 2px solid azure;
+}
+
+.nameHeading,
+.avgHeading {
+  border-right: 2px solid azure;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avgHeading {
+  background-color: var(--lightGreen);
+}
+
+.nameHeading {
+  color: var(--darkGrey);
+}
+
+.nameAvgsTable {
+  grid-area: nameAvgsTable;
+  display: grid;
+  grid-template-columns: auto 80px;
+  grid-auto-rows: 40px;
+  grid-auto-flow: row;
+  grid-gap: 2px;
+  overflow-y: scroll;
+  overflow-x: auto;
+
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: -17px;
+}
+
+.nameCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--darkGrey);
+}
+
+.avgCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid azure;
+  background-color: var(--lightGreen);
+}
+
+/* ====================== End Name & average Table============================= */
+
+/* ====================== Marks Table============================= */
+.marksTable {
+  grid-area: marksTable;
+  display: grid;
+  grid-gap: 2px;
+  grid-auto-columns: 85px;
+  grid-auto-flow: column;
+
+  position: relative;
+  overflow-y: auto;
+  overflow-x: auto;
+  z-index: 2;
+  background-color: var(--azure);
+}
+
+.markCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ====================== End Marks Table============================= */
+
+/* ====================== Statistics Sidebar============================= */
+.statistics {
+  grid-area: sidebar;
+  background: var(--lightGrey);
+  color: var(--darkGrey);
+  z-index: 4;
+  padding: 10px;
+}
+.statistics h1 {
+  font-size: 22px;
+}
+.closeStatisticsBtn {
+  display: none;
+  color: var(--darkGrey);
+}
+/* ====================== End Statistics Sidebar============================= */
+
+/* ====================== Footer ============================= */
+.footer {
+  grid-area: footer;
+  background: var(--lightGrey);
+  color: var(--darkGrey);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.footer h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer p {
+  font-size: 14px;
+}
+/* ====================== End Footer ============================= */
+/* ====================== scrollBar class ============================= */
+.scrollBar {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+/* ====================== End scrollBar class ============================= */
+
+/* ====================== Responsive  {320 - 680 -960} ====================== */
+
+/* ======================  680 - 960  ============================= */
+@media all and (max-width: 960px) {
+  .statistics {
+    height: 100vh;
+    position: fixed;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: var(--lightGrey);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  .statistics h1 {
+    margin-top: 25px;
+  }
+  .navWrapper li a.statsBtn {
+    display: block;
+    padding: 0;
+  }
+  .burgerSvg {
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+  }
+  .closeStatisticsBtn {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  body {
+    grid-template-areas:
+      "header header header header header header"
+      "nameAvgsTableHead nameAvgsTableHead datesTable datesTable datesTable datesTable"
+      "nameAvgsTable nameAvgsTable marksTable marksTable marksTable marksTable"
+      "footer footer footer footer footer footer";
+    grid-template-columns: minmax(170px, 1fr) 85px repeat(4, 1fr);
+    grid-template-rows: 62px 50px auto 40px;
+  }
+
+  .footer {
+    padding-right: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .footer h2 {
+    margin-right: 20px;
+  }
+}
+/* ======================  480 - 680 ============================= */
+
+@media all and (max-width: 680px) {
+  body {
+    grid-template-rows: 48px 50px auto 40px;
+  }
+  .navWrapper {
+    justify-content: space-around;
+  }
+
+  .navLastLi {
+    margin-left: inherit;
+  }
+  .navFirstLi {
+    margin-left: inherit;
+  }
+  .navWrapper li a {
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 15px 0;
+  }
+}
+/* ======================  0 - 480 ============================= */
+@media all and (max-width: 480px) {
+  body {
+    grid-template-columns: 100px 52px repeat(4, 1fr);
+  }
+  .navWrapper li a {
+    margin: 0px;
+    padding: 7px 0;
+  }
+
+  .navWrapper li span {
+    display: block;
+  }
+  .nameAvgsTable {
+    grid-template-columns: 100px 50px;
+    grid-auto-rows: 40px;
+  }
+  .nameAvgsTableHead {
+    grid-template-columns: 102px 50px;
+  }
+}
