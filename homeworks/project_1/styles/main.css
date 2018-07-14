@@ -2,16 +2,17 @@
 @font-face {
   font-family: gothamRounded;
   src: url(fonts/GothamRounded-Medium.otf);
-  }
+}
 
 :root {
-  --darkGrey: #3E474F;
+  --darkGrey: #3e474f;
   --grey: #b2bbbd;
-  --lightGrey: #EDEFF0;
+  --lightGrey: #edeff0;
   --darkGreen: #043927;
   --lightGreen: #3f704d;
   --azure: azure;
   --red: #8d021f;
+  --green: #01796f;
 }
 
 html {
@@ -19,10 +20,17 @@ html {
   background: var(--red);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
+.red {
+  background-color: var(--red);
+}
+.green {
+  background-color: var(--green);
+}
 /* ======================Body============================= */
 body {
   display: grid;
@@ -68,7 +76,7 @@ body {
 .navLastLi {
   margin-left: auto;
 }
-.navWrapper li a{
+.navWrapper li a {
   text-decoration: none;
   display: block;
   color: var(--grey);
@@ -123,7 +131,8 @@ body {
   border-bottom: 2px solid azure;
 }
 
- .nameHeading, .avgHeading {
+.nameHeading,
+.avgHeading {
   border-right: 2px solid azure;
   display: flex;
   justify-content: center;
@@ -170,7 +179,6 @@ body {
   align-items: center;
   border-right: 2px solid azure;
   background-color: var(--lightGreen);
-  
 }
 
 /* ====================== End Name & average Table============================= */
@@ -188,7 +196,6 @@ body {
   overflow-x: auto;
   z-index: 2;
   background-color: var(--azure);
-
 }
 
 .markCell {
@@ -200,7 +207,7 @@ body {
 
 /* ====================== Statistics Sidebar============================= */
 .statistics {
-  grid-area: sidebar; 
+  grid-area: sidebar;
   background: var(--lightGrey);
   color: var(--darkGrey);
   z-index: 4;
@@ -267,7 +274,6 @@ body {
     display: block;
     padding: 0;
   }
-
   .burgerSvg {
     display: block;
     margin: auto;
@@ -284,10 +290,10 @@ body {
   }
   body {
     grid-template-areas:
-    "header header header header header header"
-    "nameAvgsTableHead nameAvgsTableHead datesTable datesTable datesTable datesTable"
-    "nameAvgsTable nameAvgsTable marksTable marksTable marksTable marksTable"
-    "footer footer footer footer footer footer";
+      "header header header header header header"
+      "nameAvgsTableHead nameAvgsTableHead datesTable datesTable datesTable datesTable"
+      "nameAvgsTable nameAvgsTable marksTable marksTable marksTable marksTable"
+      "footer footer footer footer footer footer";
     grid-template-columns: minmax(170px, 1fr) 85px repeat(4, 1fr);
     grid-template-rows: 62px 50px auto 40px;
   }
@@ -297,52 +303,50 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-  
   }
   .footer h2 {
-  margin-right: 20px;
-  }
-/* ======================  320 - 680 ============================= */
-  @media all and (max-width: 680px) {
-
-    .navWrapper {
-      justify-content: space-around;
-    }
-
-    .navLastLi {
-      margin-left: inherit;
-    }
-   .navFirstLi {
-      margin-left: inherit;
-    }
-    .navWrapper li a{
-      font-size: 14px;
-      margin: 0 5px;
-      padding: 10px 0;
-    }
+    margin-right: 20px;
   }
 }
-@media all and (max-width: 480px) {
-  /* //till 320 */
+/* ======================  480 - 680 ============================= */
+
+@media all and (max-width: 680px) {
   body {
-    grid-template-columns: 100px 52px repeat(4, 1fr);
+    grid-template-rows: 48px 50px auto 40px;
   }
-  .navWrapper li a{
-    font-size: 14px;
-    margin: 0px;
+  .navWrapper {
+    justify-content: space-around;
   }
 
+  .navLastLi {
+    margin-left: inherit;
+  }
+  .navFirstLi {
+    margin-left: inherit;
+  }
+  .navWrapper li a {
+    font-size: 14px;
+    margin: 0 5px;
+    padding: 15px 0;
+  }
+}
+/* ======================  0 - 480 ============================= */
+@media all and (max-width: 480px) {
+  body {
+    grid-template-columns: 120px 52px repeat(4, 1fr);
+  }
+  .navWrapper li a {
+    margin: 0px;
+    padding: 7px 0;
+  }
   .navWrapper li span {
     display: block;
   }
   .nameAvgsTable {
-    grid-template-columns: 100px 50px;
+    grid-template-columns: 120px 50px;
     grid-auto-rows: 40px;
   }
   .nameAvgsTableHead {
-  grid-template-columns: 102px 50px;
+    grid-template-columns: 122px 50px;
   }
-
 }
-
-
