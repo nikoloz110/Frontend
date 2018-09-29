@@ -1,0 +1,65 @@
+@font-face {
+  font-family: Young-Light;
+  src: url(fonts/Young-Light.otf);
+}
+:root {
+  --darkGrey: #3e474f;
+  --lightGrey: #c9c9c9;
+}
+html {
+  background-color: var(--darkGrey);
+}
+body {
+  font-family: Young-Light, Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+  font-weight: bold;
+  margin: 0;
+}
+#gameContainer {
+  display: flex;
+  max-width: 1280px;
+  margin: 20px auto;
+  justify-content: center;
+  background-color: var(--darkGrey);
+}
+#menu {
+  max-width: 300px;
+  padding-left: 15px;
+}
+#canvas {
+  background-color: white;
+}
+input {
+  width: 80px;
+}
+
+input[type="radio"] {
+  width: 30px;
+}
+
+.settingsName {
+  display: inline;
+  color: white;
+  font-size: 1.8em;
+}
+label {
+  color: var(--lightGrey);
+}
+.inputContainer {
+  display: flex;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.settingsName {
+  display: inline-block;
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
+
+#radioWrapper {
+  margin-top: -8px;
+}

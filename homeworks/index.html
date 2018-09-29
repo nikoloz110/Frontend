@@ -1,82 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Homeworks</title>
-  <style>
-    body {
-      background:
-      radial-gradient(black 15%, transparent 16%) 0 0,
-      radial-gradient(black 15%, transparent 16%) 8px 8px,
-      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-      radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-      background-color:#282828;
-      background-size:16px 16px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 1.2em;
-    }
-    
-    a {
-      color: rgb(17, 207, 33);
-      text-decoration: none;
-    }
-
-    a:hover, a:active {
-      color: rgb(10, 208, 243);
-    }
-    nav {
-      text-align: center;
-    }
-    ul {
-      margin-left: auto;
-      margin-right: auto;
-      display: inline-block;
-      padding: 0;
-      list-style: none;
-      font-weight: 600;
-    }
-
-    ul li {
-      padding: 8px;
-      text-align: left;
-    }
-
-    h1 {
-      text-align: center;
-      color: rgb(7, 161, 20);
-    }
-  </style>
+  <title>Snake</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
+
 <body>
-  <h1>Nikoloz Asatiani Homeworks</h1>
-  <nav>
-    <ul>
-      <li><a href="5_may/ilia.html" target="_blank">5 may - ilia</a></li>
-    <li><a href="5_may/table.html" target="_blank">5 may  - table</a></li>
-    <li><a href="14_may/bonus.html" target="_blank">14 may  - bonus</a></li>
-    <li><a href="14_may/chess.html" target="_blank">14 may  - chess</a></li>
-    <li><a href="19_may/angry.html" target="_blank">19 may  - angry birds</a></li>
-    <li><a href="19_may/gallery.html" target="_blank">19 may - gallery</a></li>
-    <li><a href="21_may/index.html" target="_blank">21 may - floats</a></li>
-    <li><a href="3_june/simmons/simmons-academics-layout-starter.html" target="_blank">3 june - simmons academics</a></li>
-    <li><a href="3_june/teamtreehouse/index.html" target="_blank">3 june - webpage: teamtreehouse.com/library</a></li>
-    <li><a href="3_june/3wayLayout/index.html" target="_blank">3 june - flex layout</a></li>
-    <li><a href="3_june/gridLayout/index.html" target="_blank">9 june - grid layout</a></li>
-    <li><a href="24_june/index.html" target="_blank">24 june - js calculator ex N8</a></li>
-    <li><a href="24_june/car.html" target="_blank">24 june - car</a></li>
-    <li><a href="29_june/index.html" target="_blank">29 june - generateHtml</a></li>
-    <li><a href="colors/index.html" target="_blank">colors boxes</a></li>
-    <li><a href="anagrams/index.html" target="_blank">anagrams</a></li>
-    <li><a href="domTraverse/index.html" target="_blank">dom traverse</a></li>
-    <li><a href="project_1/index.html" target="_blank">Project 1</a></li>
-    <li><a href="calendar/index.html" target="_blank">calendar</a></li>
-    <li><a href="delay/index.html" target="_blank">delay</a></li>
-    <li><a href="randomColors/index.html" target="_blank">random colors</a></li>
-    <li><a href="150Array/amocana.html" target="_blank">array 150</a></li>
-    <li><a href="usersFetch/index.html" target="_blank">fetch users</a></li>
-    </ul>
-  </nav>
+  <section id="gameContainer">
+    <div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <!-------------------- settings ---------------------------->
+    <aside id="menu">
+      <!-- difficulty -->
+      <span class="settingsName">Difficulty</span>
+      <div id="radioWrapper">
+        <input type="radio" name="difficulty" value="novice" id="novice"><label for="novice">Novice</label>
+        <input type="radio" name="difficulty" value="intermediate" id="intermediate" checked><label for="intermediate">Interm</label>
+        <input type="radio" name="difficulty" value="hard" id="hard"><label for="hard">Hard</label>
+      </div>
+      <!-- board -->
+      <span class="settingsName">Board</span>
+      <div class="inputContainer">
+        <div class="input">
+          <input type="number" id="width" placeholder="width" value="500" min="300" max="950">
+          <label for="width">width</label>
+        </div>
+        <div class="input">
+          <input type="number" id="height" placeholder="height" value="500" min="300" max="950">
+          <label for="height">height</label>
+        </div>
+        <div class="input">
+          <input type="text" id="boardColor" placeholder="color" value="white">
+          <label for="boardColor">boardColor</label>
+        </div>
+      </div>
+      <!-- snake -->
+      <span class="settingsName">Snake</span>
+      <div class="inputContainer">
+        <div class="input">
+          <input type="number" id="length" placeholder="length" value="5" min="1" max="40">
+          <label for="length">length</label>
+        </div>
+        <div class="input">
+          <input type="text" id="snakeColor" placeholder="color" value="black">
+          <label for="snakeColor">color</label>
+        </div>
+        <div class="input">
+          <select name="speed" id="speed">
+            <option value="slow">slow</option>
+            <option value="normal" selected>normal</option>
+            <option value="fast">fast</option>
+          </select>
+          <label for="speed">speed</label>
+        </div>
+      </div>
+      <!-- apple -->
+      <span class="settingsName">Apple</span>
+      <div class="inputContainer">
+        <div class="input">
+          <input type="number" id="quantity" placeholder="quantity" value="3" min="1" max="500">
+          <label for="quantity">quantity</label>
+        </div>
+        <div class="input">
+          <input type="text" id="appleColor" placeholder="color" value="red">
+          <label for="appleColor">color</label>
+        </div>
+      </div>
+    </aside>
+  </section>
+  <script src="scripts/board.js"></script>
+  <script src="scripts/snake.js"></script>
+  <script src="scripts/apple.js"></script>
+  <script src="scripts/game.js"></script>
+  <script src="scripts/main.js"></script>
+
 </body>
+
 </html>
