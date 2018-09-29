@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Snake</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <section id="gameContainer">
+    <div>
+      <canvas id="canvas"></canvas>
+    </div>
+    <!-------------------- settings ---------------------------->
+    <aside id="menu">
+      <!-- difficulty -->
+      <span class="settingsName">Difficulty</span>
+      <div id="radioWrapper">
+        <input type="radio" name="difficulty" value="novice" id="novice"><label for="novice">Novice</label>
+        <input type="radio" name="difficulty" value="intermediate" id="intermediate" checked><label for="intermediate">Interm</label>
+        <input type="radio" name="difficulty" value="hard" id="hard"><label for="hard">Hard</label>
+      </div>
+      <!-- board -->
+      <span class="settingsName">Board</span>
+      <div class="inputContainer">
+        <div class="input">
+          <input type="number" id="width" placeholder="width" value="500" min="300" max="950">
+          <label for="width">width</label>
+        </div>
+        <div class="input">
+          <input type="number" id="height" placeholder="height" value="500" min="300" max="950">
+          <label for="height">height</label>
+        </div>
+        <div class="input">
+          <input type="text" id="boardColor" placeholder="color" value="white">
+          <label for="boardColor">boardColor</label>
+        </div>
+      </div>
+      <!-- snake -->
+      <span class="settingsName">Snake</span>
+      <div class="inputContainer">
+        <div class="input">
+          <input type="number" id="length" placeholder="length" value="5" min="1" max="40">
+          <label for="length">length</label>
+        </div>
+        <div class="input">
+          <input type="text" id="snakeColor" placeholder="color" value="black">
+          <label for="snakeColor">color</label>
+        </div>
+        <div class="input">
+          <select name="speed" id="speed">
+            <option value="slow">slow</option>
+            <option value="normal" selected>normal</option>
+            <option value="fast">fast</option>
+          </select>
+          <label for="speed">speed</label>
+        </div>
+      </div>
+      <!-- apple -->
+      <span class="settingsName">Apple</span>
+      <div class="inputContainer">
+        <div class="input">
+          <input type="number" id="quantity" placeholder="quantity" value="3" min="1" max="500">
+          <label for="quantity">quantity</label>
+        </div>
+        <div class="input">
+          <input type="text" id="appleColor" placeholder="color" value="red">
+          <label for="appleColor">color</label>
+        </div>
+      </div>
+    </aside>
+  </section>
+  <script src="scripts/board.js"></script>
+  <script src="scripts/snake.js"></script>
+  <script src="scripts/apple.js"></script>
+  <script src="scripts/game.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
