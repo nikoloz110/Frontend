@@ -125,7 +125,7 @@ class Game {
       );
       this.board.ctx.fillText(
         `your score - ${localStorage.getItem("lastScore")}`,
-        this.board.width / 2 - 105,
+        this.board.width / 2 - 120,
         this.board.height / 2 - 10
       );
 
